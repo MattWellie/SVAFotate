@@ -1,0 +1,9 @@
+#CHROM	START	END	SVTYPE	SV_ID	Het_Samples	HomAlt_Samples	Targets
+1	17389999	17390001	BND	bnd_1	mother,proband	None	PADI6
+1	17372195	17379115	DEL	lof_del_padi6	None	None	PADI6
+1	17379413	17383593	DEL	lof_del_padi6	None	None	PADI6
+1	17384525	17399466	DEL	lof_del_padi6	None	None	PADI6
+1	17401009	17401699	DEL	lof_del_padi6	None	None	PADI6
+1	38874499	38876500	DUP	intragenic_dup_gja9	father,proband	None	GJA9
+1	66339	66340	INS	ins_end_eq_pos	mother,proband	None	None
+1	1171037	1205428	INV	inv_common_in_callset	proband	None	inside_inv

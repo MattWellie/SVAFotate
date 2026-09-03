@@ -1,0 +1,10 @@
+#CHROM	START	END	SVTYPE	SV_ID	Het_Samples	HomAlt_Samples
+1	17389999	17390001	BND	bnd_1	mother,proband	None
+1	509967	600431	DEL	common_del	father,proband	None
+1	600854	690000	DEL	common_del	father,proband	None
+1	600000	600200	DEL	small_del_in_large	proband	None
+1	17372195	17383593	DEL	lof_del_padi6	None	None
+1	17384525	17399466	DEL	lof_del_padi6	None	None
+1	17401009	17401699	DEL	lof_del_padi6	None	None
+1	38874499	38876500	DUP	intragenic_dup_gja9	father,proband	None
+1	66339	66340	INS	ins_end_eq_pos	mother,proband	None
