@@ -1,0 +1,40 @@
+
+Annotating the following VCF: /Users/matwel/code/SVAFotate/tests/data/extended.vcf
+
+No reciprocal overlap fraction indicated; using default 0.001
+
+Reading the following data source file: /Users/matwel/code/SVAFotate/tests/data/ref_multi_source.bed.gz
+
+Annotating with the following sources and reciprocal overlap fractions:
+TOPMed	0.001
+CCDG	0.001
+gnomAD	0.001
+ThousG	0.001
+
+Additional annotations requested:
+Best match ID, frequencies and counts
+
+Gathering SV coordinates from VCF file: /Users/matwel/code/SVAFotate/tests/data/extended.vcf
+
+Creating pyranges object from VCF data...
+
+Running pyranges.join for:
+TOPMed
+
+Running pyranges.join for:
+CCDG
+There are no overlap matches for CCDG
+
+Running pyranges.join for:
+gnomAD
+
+Running pyranges.join for:
+ThousG
+
+Creating pyranges objects per SVTYPE from VCF data...
+
+Adding annotations to output VCF...
+
+Annoted VCF writen to: out.vcf
+
+DONE

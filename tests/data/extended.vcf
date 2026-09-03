@@ -1,0 +1,23 @@
+##fileformat=VCFv4.2
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=BND,Description="Breakend">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Length of the structural variant">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END">
+##INFO=<ID=CIPOS95,Number=2,Type=Integer,Description="95% confidence interval around POS">
+##INFO=<ID=CIEND95,Number=2,Type=Integer,Description="95% confidence interval around END">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	proband	father	mother
+chr1	509968	ci_common_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=180032;END=690000;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100	GT	0/1	0/1	0/0
+chr1	21489967	ci_dup	N	<DUP>	.	PASS	SVTYPE=DUP;SVLEN=4889;END=21494856;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100	GT	0/1	0/0	1/1
+chr1	17372196	no_end_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=29503;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100	GT	1/1	0/0	0/0
+chr1	66340	ins_no_svlen	N	<INS>	.	PASS	SVTYPE=INS;END=66340;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100	GT	0/1	0/0	0/1
+chr2	100000	chr2_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=5000;END=105000;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100	GT	0/1	0/1	0/1
+chr1	600001	nested_del_homalt	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=200;END=600200;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100	GT	1/1	1/1	1/1

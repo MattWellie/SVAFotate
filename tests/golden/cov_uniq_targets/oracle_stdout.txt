@@ -1,0 +1,112 @@
+
+Annotating the following VCF: /Users/matwel/code/SVAFotate/tests/data/joint_sv.vcf.gz
+
+No reciprocal overlap fraction indicated; using default 0.001
+
+Reading the following data source file: /Users/matwel/code/SVAFotate/tests/data/ref_multi_source.bed.gz
+
+Annotating with the following sources and reciprocal overlap fractions:
+TOPMed	0.001
+CCDG	0.001
+ThousG	0.001
+gnomAD	0.001
+
+SV_Cov annotation requested; AF cutoff of: 0.01
+
+Producing uniques.bed output and SV_Uniq annotation requested; AF cutoff of: 0.01
+
+Reading the following targets BED file:
+/Users/matwel/code/SVAFotate/tests/data/targets.bed
+
+Gathering SV coordinates from VCF file: /Users/matwel/code/SVAFotate/tests/data/joint_sv.vcf.gz
+
+Creating pyranges object from VCF data...
+
+Running pyranges.join for:
+TOPMed
+
+Running pyranges.join for:
+CCDG
+
+Running pyranges.join for:
+ThousG
+
+Running pyranges.join for:
+gnomAD
+
+Running pyranges.join for:
+/Users/matwel/code/SVAFotate/tests/data/targets.bed
+
+Creating pyranges objects per SVTYPE from VCF data...
+
+Running pyranges.coverage for:
+BND
+Testing:
+TOPMed
+BND not found in TOPMed, skipping
+CCDG
+ThousG
+BND not found in ThousG, skipping
+gnomAD
+
+Running pyranges.subtract for:
+BND
+
+Running pyranges.coverage for:
+DEL
+Testing:
+TOPMed
+CCDG
+ThousG
+gnomAD
+
+Running pyranges.subtract for:
+DEL
+
+Running pyranges.coverage for:
+DUP
+Testing:
+TOPMed
+DUP not found in TOPMed, skipping
+CCDG
+DUP not found in CCDG, skipping
+ThousG
+gnomAD
+
+Running pyranges.subtract for:
+DUP
+
+Running pyranges.coverage for:
+INS
+Testing:
+TOPMed
+INS not found in TOPMed, skipping
+CCDG
+INS not found in CCDG, skipping
+ThousG
+gnomAD
+
+Running pyranges.subtract for:
+INS
+
+Running pyranges.coverage for:
+INV
+Testing:
+TOPMed
+INV not found in TOPMed, skipping
+CCDG
+ThousG
+INV not found in ThousG, skipping
+gnomAD
+INV not found in gnomAD, skipping
+
+Running pyranges.subtract for:
+INV
+
+Printing unique regions to uniques.bed
+
+Adding annotations to output VCF...
+
+Annoted VCF writen to: out.vcf
+
+DONE

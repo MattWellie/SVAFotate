@@ -1,0 +1,42 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=chr1,length=248956422>
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=BND,Description="Breakend">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Length of the structural variant">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=CHR2,Number=1,Type=String,Description="Chromosome of the second breakend">
+##INFO=<ID=END2,Number=1,Type=Integer,Description="Position of the second breakend">
+##INFO=<ID=ALGORITHMS,Number=.,Type=String,Description="Callers supporting this variant">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in the joint call">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency in the joint call">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Allele number in the joint call">
+##INFO=<ID=N_HET,Number=1,Type=Integer,Description="Number of heterozygous samples">
+##INFO=<ID=N_HOMALT,Number=1,Type=Integer,Description="Number of homozygous-alt samples">
+##INFO=<ID=MALE_AF,Number=A,Type=Float,Description="Allele frequency in male samples">
+##INFO=<ID=FEMALE_AF,Number=A,Type=Float,Description="Allele frequency in female samples">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=Max_AF,Number=1,Type=Float,Description="The maximum AF from all matching SVs across all specified data sources (gnomAD)">
+##INFO=<ID=Max_Het,Number=1,Type=Integer,Description="The maximum Het count from all matching SVs across all specified data sources (gnomAD)">
+##INFO=<ID=Max_HomAlt,Number=1,Type=Integer,Description="The maximum HomAlt count from all matching SVs across all specified data sources (gnomAD)">
+##INFO=<ID=Max_PopMax_AF,Number=1,Type=Float,Description="The maximum PopMax_AF from all matching SVs across all specified data sources (gnomAD)">
+##INFO=<ID=gnomAD_Count,Number=1,Type=Integer,Description="The number of matching SVs with gnomAD">
+##INFO=<ID=Best_gnomAD_ID,Number=1,Type=String,Description="The gnomAD ID of the best matching SV">
+##INFO=<ID=Best_gnomAD_OFP,Number=1,Type=Float,Description="The gnomAD OFP of the best matching SV">
+##INFO=<ID=Best_gnomAD_AF,Number=1,Type=Float,Description="The best AF match for gnomAD">
+##INFO=<ID=Best_gnomAD_Het,Number=1,Type=Integer,Description="The best Het count match for gnomAD">
+##INFO=<ID=Best_gnomAD_HomAlt,Number=1,Type=Integer,Description="The best HomAlt count match for gnomAD">
+##INFO=<ID=Best_gnomAD_PopMax_AF,Number=1,Type=Float,Description="The best PopMax_AF match for gnomAD">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	proband	father	mother
+chr1	66340	ins_end_eq_pos	N	<INS>	.	PASS	SVTYPE=INS;SVLEN=161;END=66340;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;Max_AF=0.00245;Max_Het=298;Max_HomAlt=0;Max_PopMax_AF=0.007085;gnomAD_Count=1;Best_gnomAD_ID=gnomAD-SV_v3_INS_chr1_3f94b1dc;Best_gnomAD_OFP=1;Best_gnomAD_AF=0.00245000002906;Best_gnomAD_Het=298;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=0.00708500016481	GT	0/1	0/0	0/1
+chr1	509968	common_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=180032;END=690000;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;Max_AF=0.223765;Max_Het=27305;Max_HomAlt=455;Max_PopMax_AF=0.285811;gnomAD_Count=1;Best_gnomAD_ID=gnomAD-SV_v3_DEL_chr1_143f6519;Best_gnomAD_OFP=1;Best_gnomAD_AF=0.223765000701;Best_gnomAD_Het=27305;Best_gnomAD_HomAlt=455;Best_gnomAD_PopMax_AF=0.285811007023	GT	0/1	0/1	0/0
+chr1	600001	small_del_in_large	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=200;END=600200;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;gnomAD_Count=0;Best_gnomAD_ID=gnomAD-SV_v3_DEL_chr1_999aac29;Best_gnomAD_OFP=0.00322513;Best_gnomAD_AF=0.00120499997865;Best_gnomAD_Het=140;Best_gnomAD_HomAlt=2;Best_gnomAD_PopMax_AF=0.00303000002168	GT	0/1	0/0	0/0
+chr1	1171038	inv_common_in_callset	N	<INV>	.	PASS	SVTYPE=INV;SVLEN=34390;END=1205428;ALGORITHMS=depth;AC=400;AF=0.2;AN=2000;N_HET=400;N_HOMALT=0;MALE_AF=0.2;FEMALE_AF=0.2;Max_AF=8e-06;Max_Het=1;Max_HomAlt=0;Max_PopMax_AF=0.000636;gnomAD_Count=1;Best_gnomAD_ID=gnomAD-SV_v3_INV_chr1_b34a7097;Best_gnomAD_OFP=1;Best_gnomAD_AF=7.9999999798e-06;Best_gnomAD_Het=1;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=0.000636000011582	GT	0/1	0/0	0/0
+chr1	17372196	lof_del_padi6	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=29503;END=17401699;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;gnomAD_Count=0;Best_gnomAD_ID=gnomAD-SV_v3_DEL_chr1_7b67fb38;Best_gnomAD_OFP=0.127339;Best_gnomAD_AF=1.59999999596e-05;Best_gnomAD_Het=2;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=0.000226999996812	GT	1/1	0/0	0/0
+chr1	17390000	bnd_1	N	N]chr1:38875000]	.	PASS	SVTYPE=BND;SVLEN=-1;END=17390001;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;CHR2=chr1;END2=38875000;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;gnomAD_Count=0	GT	0/1	0/0	0/1
+chr1	21489967	dup_two_matches	N	<DUP>	.	PASS	SVTYPE=DUP;SVLEN=4889;END=21494856;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;Max_AF=0.704181;Max_Het=1;Max_HomAlt=3385;Max_PopMax_AF=0.88145;gnomAD_Count=4;Best_gnomAD_ID=gnomAD-SV_v3_DUP_chr1_eb9a525a;Best_gnomAD_OFP=1;Best_gnomAD_AF=0.704181015491;Best_gnomAD_Het=0;Best_gnomAD_HomAlt=3385;Best_gnomAD_PopMax_AF=0.881449997425	GT	0/1	0/0	0/1
+chr1	38874500	intragenic_dup_gja9	N	<DUP>	.	PASS	SVTYPE=DUP;SVLEN=2001;END=38876500;ALGORITHMS=depth;AC=2;AF=0.001;AN=2000;N_HET=2;N_HOMALT=0;MALE_AF=0.001;FEMALE_AF=0.001;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;gnomAD_Count=0	GT	0/1	0/1	0/0

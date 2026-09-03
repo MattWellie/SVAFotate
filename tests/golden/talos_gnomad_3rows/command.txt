@@ -1,0 +1,1 @@
+/Users/matwel/code/SVAFotate/.venv-legacy/bin/svafotate annotate -v /Users/matwel/code/SVAFotate/tests/data/joint_sv.vcf.gz -o out.vcf -b /Users/matwel/code/SVAFotate/tests/data/ref_gnomad_3rows.bed -s gnomAD -f 0.5 -a best --ins --cpu 1

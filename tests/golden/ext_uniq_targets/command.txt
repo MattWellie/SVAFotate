@@ -1,0 +1,1 @@
+/Users/matwel/code/SVAFotate/.venv-legacy/bin/svafotate annotate -v /Users/matwel/code/SVAFotate/tests/data/extended.vcf -o out.vcf -b /Users/matwel/code/SVAFotate/tests/data/ref_multi_source.bed.gz -u 0.0 -t /Users/matwel/code/SVAFotate/tests/data/targets.bed -c 0.0

@@ -1,0 +1,56 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=BND,Description="Breakend">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Length of the structural variant">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END">
+##INFO=<ID=CIPOS95,Number=2,Type=Integer,Description="95% confidence interval around POS">
+##INFO=<ID=CIEND95,Number=2,Type=Integer,Description="95% confidence interval around END">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=Max_AF,Number=1,Type=Float,Description="The maximum AF from all matching SVs across all specified data sources (TOPMed, gnomAD, CCDG, ThousG)">
+##INFO=<ID=Max_Het,Number=1,Type=Integer,Description="The maximum Het count from all matching SVs across all specified data sources (TOPMed, gnomAD, CCDG, ThousG)">
+##INFO=<ID=Max_HomAlt,Number=1,Type=Integer,Description="The maximum HomAlt count from all matching SVs across all specified data sources (TOPMed, gnomAD, CCDG, ThousG)">
+##INFO=<ID=Max_PopMax_AF,Number=1,Type=Float,Description="The maximum PopMax_AF from all matching SVs across all specified data sources (TOPMed, gnomAD, CCDG, ThousG)">
+##INFO=<ID=TOPMed_Count,Number=1,Type=Integer,Description="The number of matching SVs with TOPMed">
+##INFO=<ID=Best_TOPMed_ID,Number=1,Type=String,Description="The TOPMed ID of the best matching SV">
+##INFO=<ID=Best_TOPMed_OFP,Number=1,Type=Float,Description="The TOPMed OFP of the best matching SV">
+##INFO=<ID=Best_TOPMed_AF,Number=1,Type=Float,Description="The best AF match for TOPMed">
+##INFO=<ID=Best_TOPMed_Het,Number=1,Type=Integer,Description="The best Het count match for TOPMed">
+##INFO=<ID=Best_TOPMed_HomAlt,Number=1,Type=Integer,Description="The best HomAlt count match for TOPMed">
+##INFO=<ID=Best_TOPMed_PopMax_AF,Number=1,Type=Float,Description="The best PopMax_AF match for TOPMed">
+##INFO=<ID=gnomAD_Count,Number=1,Type=Integer,Description="The number of matching SVs with gnomAD">
+##INFO=<ID=Best_gnomAD_ID,Number=1,Type=String,Description="The gnomAD ID of the best matching SV">
+##INFO=<ID=Best_gnomAD_OFP,Number=1,Type=Float,Description="The gnomAD OFP of the best matching SV">
+##INFO=<ID=Best_gnomAD_AF,Number=1,Type=Float,Description="The best AF match for gnomAD">
+##INFO=<ID=Best_gnomAD_Het,Number=1,Type=Integer,Description="The best Het count match for gnomAD">
+##INFO=<ID=Best_gnomAD_HomAlt,Number=1,Type=Integer,Description="The best HomAlt count match for gnomAD">
+##INFO=<ID=Best_gnomAD_PopMax_AF,Number=1,Type=Float,Description="The best PopMax_AF match for gnomAD">
+##INFO=<ID=CCDG_Count,Number=1,Type=Integer,Description="The number of matching SVs with CCDG">
+##INFO=<ID=Best_CCDG_ID,Number=1,Type=String,Description="The CCDG ID of the best matching SV">
+##INFO=<ID=Best_CCDG_OFP,Number=1,Type=Float,Description="The CCDG OFP of the best matching SV">
+##INFO=<ID=Best_CCDG_AF,Number=1,Type=Float,Description="The best AF match for CCDG">
+##INFO=<ID=Best_CCDG_Het,Number=1,Type=Integer,Description="The best Het count match for CCDG">
+##INFO=<ID=Best_CCDG_HomAlt,Number=1,Type=Integer,Description="The best HomAlt count match for CCDG">
+##INFO=<ID=Best_CCDG_PopMax_AF,Number=1,Type=Float,Description="The best PopMax_AF match for CCDG">
+##INFO=<ID=ThousG_Count,Number=1,Type=Integer,Description="The number of matching SVs with ThousG">
+##INFO=<ID=Best_ThousG_ID,Number=1,Type=String,Description="The ThousG ID of the best matching SV">
+##INFO=<ID=Best_ThousG_OFP,Number=1,Type=Float,Description="The ThousG OFP of the best matching SV">
+##INFO=<ID=Best_ThousG_AF,Number=1,Type=Float,Description="The best AF match for ThousG">
+##INFO=<ID=Best_ThousG_Het,Number=1,Type=Integer,Description="The best Het count match for ThousG">
+##INFO=<ID=Best_ThousG_HomAlt,Number=1,Type=Integer,Description="The best HomAlt count match for ThousG">
+##INFO=<ID=Best_ThousG_PopMax_AF,Number=1,Type=Float,Description="The best PopMax_AF match for ThousG">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	proband	father	mother
+chr1	509968	ci_common_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=180032;END=690000;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100;Max_AF=0.223765;Max_Het=27305;Max_HomAlt=455;Max_PopMax_AF=0.285811;TOPMed_Count=0;gnomAD_Count=1;Best_gnomAD_ID=gnomAD-SV_v3_DEL_chr1_143f6519;Best_gnomAD_OFP=0.994476;Best_gnomAD_AF=0.223765000701;Best_gnomAD_Het=27305;Best_gnomAD_HomAlt=455;Best_gnomAD_PopMax_AF=0.285811007023;CCDG_Count=0;ThousG_Count=0	GT	0/1	0/1	0/0
+chr1	21489967	ci_dup	N	<DUP>	.	PASS	SVTYPE=DUP;SVLEN=4889;END=21494856;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100;Max_AF=0.704181;Max_Het=1;Max_HomAlt=3385;Max_PopMax_AF=0.88145;TOPMed_Count=0;gnomAD_Count=4;Best_gnomAD_ID=gnomAD-SV_v3_DUP_chr1_221f2a75;Best_gnomAD_OFP=0.918234;Best_gnomAD_AF=7.9999999798e-06;Best_gnomAD_Het=1;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=8.09999983176e-05;CCDG_Count=0;ThousG_Count=1;Best_ThousG_ID=HGSV_1547;Best_ThousG_OFP=0.842275;Best_ThousG_AF=0.000155999994604;Best_ThousG_Het=1;Best_ThousG_HomAlt=0;Best_ThousG_PopMax_AF=0.00101999996696	GT	0/1	0/0	1/1
+chr1	17372196	no_end_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=29503;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;TOPMed_Count=0;Best_TOPMed_ID=DEL_1:17371901-17376200;Best_TOPMed_OFP=0.143314;Best_TOPMed_AF=3.999999989900971e-06;Best_TOPMed_Het=1;Best_TOPMed_HomAlt=0;Best_TOPMed_PopMax_AF=0.0;gnomAD_Count=0;Best_gnomAD_ID=gnomAD-SV_v3_DEL_chr1_7b67fb38;Best_gnomAD_OFP=0.125217;Best_gnomAD_AF=1.59999999596e-05;Best_gnomAD_Het=2;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=0.000226999996812;CCDG_Count=0;ThousG_Count=0;Best_ThousG_ID=HGSV_1282;Best_ThousG_OFP=0.00993201;Best_ThousG_AF=0.0324699990451;Best_ThousG_Het=174;Best_ThousG_HomAlt=17;Best_ThousG_PopMax_AF=0.109742000699	GT	1/1	0/0	0/0
+chr1	66340	ins_no_svlen	N	<INS>	.	PASS	SVTYPE=INS;END=66340;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100;Max_AF=0.013239;Max_Het=1071;Max_HomAlt=0;Max_PopMax_AF=0.025;TOPMed_Count=0;gnomAD_Count=2;Best_gnomAD_ID=gnomAD-SV_v3_INS_chr1_3f94b1dc;Best_gnomAD_OFP=0.0549451;Best_gnomAD_AF=0.00245000002906;Best_gnomAD_Het=298;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=0.00708500016481;CCDG_Count=0;ThousG_Count=0	GT	0/1	0/0	0/1
+chr2	100000	chr2_del	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=5000;END=105000;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;TOPMed_Count=0;gnomAD_Count=0;CCDG_Count=0;ThousG_Count=0	GT	0/1	0/1	0/1
+chr1	600001	nested_del_homalt	N	<DEL>	.	PASS	SVTYPE=DEL;SVLEN=200;END=600200;CIPOS=-500,500;CIEND=-500,500;CIPOS95=-100,100;CIEND95=-100,100;Max_AF=0;Max_Het=0;Max_HomAlt=0;Max_PopMax_AF=0;TOPMed_Count=0;gnomAD_Count=0;Best_gnomAD_ID=gnomAD-SV_v3_DEL_chr1_325f6f6a;Best_gnomAD_OFP=0.142555;Best_gnomAD_AF=0.108332999051;Best_gnomAD_Het=13;Best_gnomAD_HomAlt=0;Best_gnomAD_PopMax_AF=0.5;CCDG_Count=0;ThousG_Count=0	GT	1/1	1/1	1/1

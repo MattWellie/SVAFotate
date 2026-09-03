@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.13'
+      - run: uv sync --group dev
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run mypy src
+
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ['3.10', '3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      # wheels only for every dependency: one that needs a compiler is a regression in itself.
+      # --no-build also covers the project, so install the project separately without deps.
+      - run: uv sync --group dev --no-build --no-install-project
+      - run: uv pip install --no-deps -e .
+      - run: uv run pytest --cov=svafotate_cpg --cov-report=term-missing
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - run: uvx twine check dist/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  docker-smoke:
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t svafotate_cpg:ci .
+      # the same end-to-end check Talos runs at image build time: a real annotation, not just --version
+      - run: |
+          docker run --rm -v "$PWD/tests/data:/data:ro" svafotate_cpg:ci \
+            annotate -v /data/joint_sv.vcf.gz -o /tmp/out.vcf -b /data/ref_gnomad_3rows.bed \
+            -s gnomAD -f 0.5 -a best --ins --cpu 1

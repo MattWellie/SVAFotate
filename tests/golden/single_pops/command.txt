@@ -1,0 +1,1 @@
+/Users/matwel/code/SVAFotate/.venv-legacy/bin/svafotate annotate -v /Users/matwel/code/SVAFotate/tests/data/joint_sv.vcf.gz -o out.vcf -b /Users/matwel/code/SVAFotate/tests/data/ref_multi_source.bed.gz -a AFR EAS NFE

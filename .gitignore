@@ -1,0 +1,26 @@
+# environments and caches
+.venv/
+.venv-legacy/
+.venv*/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# build artefacts
+build/
+dist/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# tool output
+uniques.bed
+bench/
