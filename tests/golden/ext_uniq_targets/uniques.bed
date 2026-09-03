@@ -1,0 +1,2 @@
+#CHROM	START	END	SVTYPE	SV_ID	Het_Samples	HomAlt_Samples	Targets
+2	99999	105000	DEL	chr2_del	father,mother,proband	None	chr2_target
