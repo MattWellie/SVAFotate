@@ -90,15 +90,19 @@ def best_per_query(m: SourceMatches, mask: NDArray[np.bool_], source: SourceData
     sel = np.flatnonzero(mask)
     if len(sel) == 0:
         return {}
+    # Gather once. `m.q_idx[sel][w]` inside the comprehension re-gathered every selected pair for
+    # every winner, which is O(queries x pairs) and took 11 h on a 1,392-sample cohort SV callset.
+    q_sel = m.q_idx[sel]
+    r_sel = m.r_idx[sel]
     ofp = m.ofp[sel]
-    af = _numeric_or_zero(source, 'AF', m.r_idx[sel])
-    homalt = _numeric_or_zero(source, 'HomAlt', m.r_idx[sel])
+    af = _numeric_or_zero(source, 'AF', r_sel)
+    homalt = _numeric_or_zero(source, 'HomAlt', r_sel)
     # lexsort: last key is primary. Descending on ofp, af, homalt; ascending on position for stability.
-    order = np.lexsort((np.arange(len(sel)), -homalt, -af, -ofp, m.q_idx[sel]))
-    q_sorted = m.q_idx[sel][order]
+    order = np.lexsort((np.arange(len(sel)), -homalt, -af, -ofp, q_sel))
+    q_sorted = q_sel[order]
     first = np.r_[True, q_sorted[1:] != q_sorted[:-1]]
     winners = order[first]
-    return {int(m.q_idx[sel][w]): (int(m.r_idx[sel][w]), float(ofp[w])) for w in winners}
+    return {int(q_sel[w]): (int(r_sel[w]), float(ofp[w])) for w in winners}
 
 
 def _numeric_or_zero(source: SourceData, column: str, rows: NDArray[np.intp]) -> NDArray[np.float64]:
